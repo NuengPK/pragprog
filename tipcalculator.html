@@ -36,12 +36,12 @@
 
                 var food = Number(document.getElementById("food").value);
                 var tip1 = Number(document.getElementById("tip1").value);
-                var tip2 = food * tip1 / 100;
-                var all = food + tip2;
+                var tip2 = Math.round (food * tip1 / 100);
+                var all = Math.round (food + tip2);
             
 
                 document.getElementById("tip2").value = tip2;
-                document.getElementById("all").value = all;
+                document.getElementById("all").value = all ;
                 
 
             }
