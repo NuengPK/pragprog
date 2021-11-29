@@ -1,14 +1,15 @@
-var PP;
-PP = prompt("Enter the principal:");
-var RT;
-RT = prompt("Enter the rate of interest:");
-var NY;
-NY = prompt("Enter the number of years:");
-var invesTment;
+var TA;
+TA = Number(prompt("Enter the principal:"));
+var TB;
+TB = prompt("Enter the rate of interest:");
+var TC;
+TC = Number(prompt("Enter the number of interest:"));
+var TD;
+TD = TB*TC
+var TE;
+TE = TA*TD/100+TA;
 
-invesTment = ((PP * ( RT* NY )) / 100) + PP;
-
-console.log("Enter the principal: ",PP,"\n","."
-,",Enter the rate of interest: ",NY,"\n","."
-,"Enter the number of years: ",RT,"\n","."
-,"After ",NY," years at ",RT,"%, the investment will be worth ",Math.ceil(invesTment),".");
+console.log("Enter the principal:",TA,"\n"
+,"Enter the rate of interest: ",TB,"\n"
+,"Enter the number of years: ",TC,"\n"
+,"After ",TC," years at ",TB,"%, the investment will be worth ฿",TE,".");
