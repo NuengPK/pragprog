@@ -6,7 +6,7 @@ var NY;
 NY = prompt("Enter the number of years:");
 var invesTment;
 
-invesTment = ((PP * ( RT* NY )) / 100) + 1500;
+invesTment = ((PP * ( RT* NY )) / 100) + PP;
 
 console.log("Enter the principal: ",PP,"\n","."
 ,",Enter the rate of interest: ",NY,"\n","."
