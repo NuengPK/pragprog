@@ -1,15 +1,24 @@
-var feetToMeter ;
-feetToMeter= 10.763911;
-var feetU1;
-feetU1=Number(prompt("What is the length of the room in feet?","length"));
+var pizZas ;
+pizZas = 8 ;
 
-var feetU2;
-feetU2=Number(prompt("What is the width of the room in feet?","width"));
+var pizZas1;
+pizZas1 = Number(prompt("How many people?"));
 
+var pizZas2;
+pizZas2 = Number(prompt("How many pizzas do you heve?"));
 
-console.log("What is the length of the room in feet?",feetU1,"\n",
-            "What is the length of the room in feet?",feetU2,
-            "\n","You entered dimensions of ",feetU1," feet by ",feetU2," feet","\n"
-            ,"The area is ",feetU1*feetU2," square feet",((feetU1*feetU2)/feetToMeter).toFixed(3),"square meters");
+var pizZas3;
+pizZas3 = Math.floor(pizZas * pizZas2 / pizZas1);
 
+var pizZas4;
+pizZas4 =(pizZas * pizZas2 / pizZas1);
 
+var pizZas5;
+pizZas5 = Math.ceil((pizZas4 - pizZas3) * pizZas1);
+
+console.log("How many people?",pizZas1,"\n"
+,"How many pizzas do you heve?",pizZas2,"\n"
+            ,pizZas1," people with ",pizZas2,"pizzas\n"
+            ,"Each person gets ",pizZas3," pieces of pizza.\n" 
+            ,"there are ",pizZas5," leftover pieces.");
+            

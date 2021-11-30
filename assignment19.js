@@ -1,13 +1,15 @@
-var euRos ;
-euRos= Number(prompt("How many euros are you exchanging?"));
+var TA;
+TA = Number(prompt("Enter the principal:"));
+var TB;
+TB = prompt("Enter the rate of interest:");
+var TC;
+TC = Number(prompt("Enter the number of interest:"));
+var TD;
+TD = TB*TC
+var TE;
+TE = TA*TD/100+TA;
 
-var rate ;
-rate= Number(prompt("What is the exchange rate?"));
-  
-var dollars
-(dollars) = (euRos * rate) / 100;
-
-console.log("How many euros are you exchanging?",euRos,"\n"
-            ,"What is the exchange rate?",rate,"\n"
-            ,euRos," euros at an exchange rate of ",rate," is "
-            ,(dollars).toFixed(2)," U.S. dollars.")
+console.log("Enter the principal:",TA,"\n"
+,"Enter the rate of interest: ",TB,"\n"
+,"Enter the number of years: ",TC,"\n"
+,"After ",TC," years at ",TB,"%, the investment will be worth ฿",TE,".");

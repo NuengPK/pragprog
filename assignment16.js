@@ -1,24 +1,17 @@
-var pizZas ;
-pizZas = 8 ;
+var painT;
+painT = 350
 
-var pizZas1;
-pizZas1 = Number(prompt("How many people?"));
+var f1;
+f1 = Number(prompt("What is the length of the room in feet?","length"));
 
-var pizZas2;
-pizZas2 = Number(prompt("How many pizzas do you heve?"));
+var f2;
+f2 = Number(prompt("What is the width of the room in feet?","width"));
 
-var pizZas3;
-pizZas3 = Math.floor(pizZas * pizZas2 / pizZas1);
+var f3;
+f3 = (f1 * f2) ;
 
-var pizZas4;
-pizZas4 =(pizZas * pizZas2 / pizZas1);
+var f4;
+f4 = Math.ceil(f3 / painT) ;
 
-var pizZas5;
-pizZas5 = Math.ceil((pizZas4 - pizZas3) * pizZas1);
-
-console.log("How many people?",pizZas1,"\n"
-,"How many pizzas do you heve?",pizZas2,"\n"
-            ,pizZas1," people with ",pizZas2,"pizzas\n"
-            ,"Each person gets ",pizZas3," pieces of pizza.\n" 
-            ,"there are ",pizZas5," leftover pieces.");
-            
+console.log ("You will need to purchase ",f4
+," gallons of paint to cover ",f3," square feet.");
