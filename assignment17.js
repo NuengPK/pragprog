@@ -19,7 +19,7 @@ quanTity3 = Number(prompt("Enter the quantity of item 3:"));
 var supTotal;
 supTotal = (price1*quanTity1)+(price2*quanTity2)+(price3*quanTity3);
 
-var tax;
+var tax1;
 tax = (supTotal*5.5)/100;
 
 var Total;
@@ -32,5 +32,5 @@ console.log("Enter the price of item 1:",price1,"\n"
             ,"Enter the price of item 3:",price3,"\n"
             ,"Enter the quantity of item 3:",quanTity3,"\n"
             ,"Subtotal:",supTotal,"\n"
-            ,"Tax:",tax,"\n"
+            ,"Tax:",tax1,"\n"
             ,"Total:",Total,"\n")
