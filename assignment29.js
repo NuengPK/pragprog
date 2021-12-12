@@ -2,12 +2,12 @@ let firstNumber;
 let secondNumber;
 let thirdNumer;
 let largestNumber;
-firstNumber = Number(prompt());
+firstNumber = Number(prompt("Enter the first number: "));
 if (firstNumber) {
-    secondNumber = Number(prompt());
+    secondNumber = Number(prompt("Enter the second number: "));
     if (isNaN(secondNumber) || (secondNumber == firstNumber)) {
     } else {
-        thirdNumer = Number(prompt());
+        thirdNumer = Number(prompt("Enter the third number: "));
         if(isNaN(thirdNumer)||(thirdNumer==secondNumber||thirdNumer==firstNumber)){
         }else{
             console.log("Enter the first number: "+firstNumber+ 
