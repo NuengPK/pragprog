@@ -1,5 +1,5 @@
 let yOrN1, yOrN2, yOrN3, yOrN4, yOrN5, yOrN6;
-yOrN1 = prompt("");
+yOrN1 = prompt("is the car sient when you trun the key?");
 
 if (yOrN1 == "y") {
     yOrN2 = prompt("Aer the battery ter minals corroded?");
