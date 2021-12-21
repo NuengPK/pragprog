@@ -1,3 +1,4 @@
+//Built-In function
 let inputName = prompt("Input Name");
 let inputSurname = prompt("Input Surname");
 let inputSex = prompt("Input sex");
