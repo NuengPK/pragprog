@@ -12,7 +12,7 @@ console.log("Resting Pulse: " + restingHR + " Age: " +age+ "\n" +
     "Intensity | Rate\n" +
     "----|--------")
 
-for (let a = 55; a < 96; a++) {
+for (let a = 55; a < 96; a=a+5) {
     intensity = a / 100
     targetHeartRate = (((220 - age) - restingHR) * intensity) + (restingHR*1)
     //(((220 - age) - restingHR) * intensity) + restingHR      ไม่ทำงาน เพราะ ใส่ restingHR ซ้ำ หรือ เกิน1ครั้ง
