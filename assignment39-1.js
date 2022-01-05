@@ -6,35 +6,34 @@ do {
 
     do {
         level = prompt("Pick a difficulty level (1, 2, or 3):")
-    } while (isNaN(level) || level > 3 || level == "")
+    } while (isNaN(level) || level > 3 || level == "" || level.includes(0))
     console.log("Pick a difficulty level (1, 2, or 3) : " + level)
 
     lHint = Math.floor(hint * (10 ** level))
     
     console.log(lHint)
     guess = prompt("I have my number. What's your guess?")
+    console.log("I have my number. What's your guess?"+guess)
+
     do {
-    
+    g++
         if (guess > lHint) {
-            console.log("Too high. Guess again: " + guess)
-            console.log("You got it in " + g + " guesses!\n")
+            console.log("Too high.")
         } else if (guess == ""){
-            console.log("Prompt a number. Guess again ")
-            console.log("You got it in " + g + " guesses!\n")
+            console.log("Prompt a number.")
         } else if (guess < lHint) {
-            console.log("Too low. Guess again: " + guess)
-            console.log("You got it in " + g + " guesses!\n")
+            console.log("Too low.")
         } else if (isNaN(guess)){
-            console.log(guess + ": Not a number. Guess again ")
-            console.log("You got it in " + g + " guesses!\n")
+            console.log(guess + ": Not a number.")
         }else if (guess == lHint){
-            console.log("True")
             break
         }
-        g++
+        
         guess = prompt("Guess again :")
+        console.log(" Guess again: " + guess)
     } while (guess !== lHint )
-    
+
+    console.log("You got it in " + g + " guesses!\n")
     do{
     playAgain = prompt("Play again?")
     if (playAgain == "n") {
@@ -42,4 +41,4 @@ do {
     } else console.log("Prompt again")
     }while(!/[n,y]/.test (playAgain))
 
-} while ((playAgain == "y"))
+} while (playAgain == "y")
