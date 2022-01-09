@@ -1,25 +1,20 @@
+let n;
+let l = 0;
+let m = 0;
 let mapNames = ["John Smith", "Jackie Jackson",
     "Chris Jones", "Amanda Cullen", "Jeremy Goodwin"]
-for (let l = 0; l < 5; l++) {
+
+while (l < mapNames.length) {
     console.log(mapNames[l])
+    l++
 }
 
-inputArray = prompt("Enter an employee name to remove: Chris Jones")
-console.log("Enter an employee name to remove: Chris Jones "+inputArray)
-if (inputArray == "John Smith")
- mapNames = ["Jackie Jackson","Chris Jones","Amanda Cullen",
-"Jeremy Goodwin",""]
-else if (inputArray == "Jackie Jackson")
- mapNames = ["John Smith","Chris Jones","Amanda Cullen",
-"Jeremy Goodwin",""]
-else if (inputArray == "Chris Jones")
- mapNames = ["John Smith","Jackie Jackson","Amanda Cullen",
-"Jeremy Goodwin",""]
-else if (inputArray == "Amanda Cullen")
- mapNames = ["John Smith","Jackie Jackson","Chris Jones","Jeremy Goodwin",""]
-else if (inputArray == "Jeremy Goodwin")
- mapNames = ["John Smith","Jackie Jackson","Chris Jones","Amanda Cullen",""]
+inputArray = prompt("Enter an employee name to remove:")
+console.log("Enter an employee name to remove:" + inputArray)
+n = mapNames.indexOf(inputArray)
+p = (n >= 0)? mapNames.splice(n,1):console.log("ไม่มีชื่อดังกล่าว");
 
- for (let l = 0; l < 5; l++) {
-    console.log(mapNames[l])
+while (m < mapNames.length) {
+    console.log(mapNames[m])
+    m++
 }
