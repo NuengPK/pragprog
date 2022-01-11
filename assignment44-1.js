@@ -7,7 +7,7 @@ let numbers = prompt("How many numbers? ");
 input1 = Number(input1)
 sCharacters = Number(sCharacters)
 numbers = Number(numbers)
-let characters = 12 - input1;
+let characters = 4;
 let quantity1 = Number(input1);
 let quantity2 = Math.floor(Math.random() * characters)
 let quantity = Number(quantity2 + quantity1);
@@ -44,7 +44,7 @@ while (rPositionPass.length < yPassword.length) {
 for (let i = 0; i < quantity; i++) {
     yourPassword += (yPassword[rPositionPass[i]])
 }
-console.log("What's the minimum length? " + characters + "\n" +
+console.log("What's the minimum length? " + input1 + "\n" +
     "How many special characters? " + sCharacters + "\n" +
     "How many numbers? " + numbers + "\n" +
     "Your password is " + yourPassword);
