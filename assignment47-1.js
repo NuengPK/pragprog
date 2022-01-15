@@ -1,4 +1,4 @@
-let people1 = [
+let people = [
     { lastName: "Johnson", firstName: "John", position: " Manager", separationDate: " 2016-12-31\n" },
     { lastName: "Xiong", firstName: "Tou", position: " Software Engineer", separationDate: " 2016-10-05\n" },
     { lastName: "Michaelson", firstName: "Michaela", position: " District Manager", separationDate: " 2015-12-19\n" },
@@ -6,15 +6,15 @@ let people1 = [
     { lastName: "Jackson", firstName: "Jacquelyn", position: " DBA", separationDate: "\n" },
     { lastName: "Weber", firstName: "Sally", position: " Web Developer", separationDate: " 2015-12-18\n" }
 ]
+let people1 = people.map(getFullName1).sort()
 let pCLEng = prompt("")
 console.log("Ineput :  " + pCLEng +"\n"+
 "Name                 | Position          | Separation Date\n"+
-"---------------------|-------------------|----------------\n")
+"---------------------|-------------------|----------------\n"
+)
 let personsC;
 let sortFnLn;
 let sortEng;
-let eFnLn;
-let eEng;
 for (i = 0; i < people1.map(getFnLn).length; i++) {
     personsC = people1.map(getFnLn)[i].indexOf(pCLEng)
     if (personsC >= 0) {
@@ -37,16 +37,16 @@ function Sort( localsortFnLn,localsortPst) {
     return localsortFnLn+localsortPst
 }
 function getPst(persons) {
-    return [persons.position].join(" ");
-}
-function getFnLn(persons) {
-    return [persons.firstName, persons.lastName].join(" ");
-}
-function getFullName(persons) {
-    return [persons.firstName, persons.lastName, persons.position, persons.separationDate].join(" ");
+    return [persons[2]].join(" ");
 }
 function getFullName2(persons) {
-    return [persons.separationDate].join(" ");
+    return [persons[3]].join(" ");
 }
-//จุดแดงเป็นรูปแบบตามโจทย์
-//ไม่มีจุดเเดงจะเป็นการสร้างตารางอัตโนมัติเพื่อสามารถรองรับการใส่ขอมูลเพิ่มเติม
+function getFnLn(persons) {
+    return [persons[0], persons[1]].join(" ");
+}
+function getFullName1(persons) {
+    return [persons.firstName, persons.lastName, persons.position, persons.separationDate];
+}
+//จุดแดงเป็นรูปแบบตามโจทย์-การสร้างตารางอัตโนมัติเพื่อสามารถรองรับการใส่ขอมูลเพิ่มเติม
+//ไม่มีจุดเเดงจะเป็นเรียงลำดับชื่อตามตัวอักษร
