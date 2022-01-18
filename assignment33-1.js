@@ -1,24 +1,11 @@
 function calcMonthsUntilPaidOff(localBalance, localAPR, localMonthlyPayment) {
- //localMonths = -(1/30)*(log(1+localBalance/localMonthlyPayment(1-(1+(localAPR/365))^30)))/log(1+(localAPR/365))
-   // a = (localAPR / 365);
-   // b = Math.log(1 + (localAPR / 365));
-   // i = (1 + a)
-   // c = i^30;
-   // h = 1-c
-   // d = c;
-   // e = localBalance / localMonthlyPayment;
-   // f = (1 + e) * d;
-   // g = Math.log(f);
-   // j = (g / b)
-   // k = -(1 / 30)
-     
- 
-   a = (1/30);
+//  localMonths = -(1/30)*log10(1+localBalance/localMonthlyPayment(1-(1+(localAPR/365))**30))/log10(1+(localAPR/365))
+   a = -(1/30);
 console.log(a)
    b = (localAPR/365);
 console.log(b)
-   c = (1+b)^30;
-console.log(c)
+   c = (1+b)**30;
+console.log(1-c)
    d = (c);
 console.log(d)
    e = localBalance/localMonthlyPayment;
@@ -27,17 +14,14 @@ console.log(e)
 console.log(f)
    g = f * d;
 console.log(g)
-   h = Math.log(g);
+   h = Math.log10(g);
 console.log(h)
    i = (localAPR/365);
 console.log(i)
-   j = Math.log(1+i);
-console.log(j) 
+   j = Math.log10(1+i);
+console.log(j)
    k = h / j;
 console.log(k)
-   
-   console.log (l ,'=', a ,'* 2100;') 
-console.log(l)
 
 console.log('-(1/30)*(log(1+(',localBalance,'/',localMonthlyPayment,')*(1-(1+(',localAPR,'/365))^30))) / log(1+(',localAPR,'/365))')
 
